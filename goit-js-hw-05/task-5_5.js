@@ -1,7 +1,7 @@
 class Car {
   // Write code under this line
   static getSpecs(car) {
-    return `maxSpeed:${car.maxSpeed}, speed:${car.speed}, isOn:${car.isOn}, distance:${car.distance}, price:${car._price}`;
+    return `maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car._price}`;
   }
   constructor(obj) {
     this.speed = 0;
@@ -17,7 +17,7 @@ class Car {
     this._price = value;
   }
   turnOn() {
-    return (this.isOn = true);
+    this.isOn = true;
   }
   turnOff() {
     this.speed = 0;
@@ -31,10 +31,7 @@ class Car {
     this.speed = this.speed - value >= 0 ? this.speed - value : 0;
   }
   drive(hours) {
-    if (this.turnOn) {
-      this.distance += hours * this.speed;
-    }
-    this.distance += 0;
+    this.distance += this.turnOn ? hours * this.speed : 0;
   }
 }
 
