@@ -2,7 +2,6 @@ function getAllPropValues(array, prop) {
   'use strict';
   const arrayInfo = [];
   for (const arrays of array) {
-    // console.log(arrays);
     for (const el in arrays) {
       if (el === prop) {
         arrayInfo.push(arrays[el]);

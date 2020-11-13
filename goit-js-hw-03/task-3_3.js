@@ -2,10 +2,7 @@ const findBestEmployee = function (employees) {
   'use strict';
   // Write code under this line
   const keys = Object.keys(employees);
-  // for (let i = 0; i < keys.length; i = +1) {
-  //   console.log(keys);
 
-  // }
   let maxVal = 0;
   let stringVal = '';
   for (const employee in employees) {

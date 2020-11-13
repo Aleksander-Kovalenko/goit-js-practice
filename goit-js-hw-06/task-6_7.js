@@ -1,3 +1,4 @@
+// Write code under this line
 const users = [
   {
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
@@ -84,7 +85,7 @@ const users = [
     age: 39,
   },
 ];
-
-const getUserWithEmail = (array, mail) =>
-  array.find(({ email }) => email == mail);
-console.log(getUserWithEmail(users, 'rossvazquez@xinware.com'));
+const calculateTotalBalance = array =>
+  array.reduce((acc, { balance }) => acc + balance, 0);
+console.log(calculateTotalBalance(users));
+// 20916

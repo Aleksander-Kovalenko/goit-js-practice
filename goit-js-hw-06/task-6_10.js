@@ -1,3 +1,4 @@
+// Write code under this line
 const users = [
   {
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
@@ -84,7 +85,10 @@ const users = [
     age: 39,
   },
 ];
+const getSortedUniqueSkills = array =>
+  array
+    .reduce((skill, user) => [...skill, ...user.skills], [])
+    .filter((skills, skill) => skills.hasOwnProperty(skill))
+    .sort();
 
-const getUserWithEmail = (array, mail) =>
-  array.find(({ email }) => email == mail);
-console.log(getUserWithEmail(users, 'rossvazquez@xinware.com'));
+console.log(getSortedUniqueSkills(users));
